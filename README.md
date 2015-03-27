@@ -30,6 +30,8 @@ Start with NO arguments. `./bin/www`
 
 Application server will start and listen on port 3000.
 
+Try this pattern in browser: 
+`http://localhost:3000/<keyword>/<numberOfResults>[/json]`
 
 ### Start as desktop application
 
