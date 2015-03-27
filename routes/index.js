@@ -10,12 +10,21 @@ router.get('/', function(req, res, next) {
 /* GET home page. */
 router.get('/:keyword/:num?', function(req, res, next) {
 	googleImages.clearResults();
-	console.log("Getting " + req.params.keyword + " - " + num);
+	console.log("Getting " + req.params.keyword);
 	googleImages.init(req.params.keyword, req.params.num, function (err, data) {
 		res.render('index', { title: 'Results', data: googleImages.getResults() });
 	});
 
 });
 
+/* GET home page. */
+router.get('/:keyword/:num?/json', function(req, res, next) {
+	googleImages.clearResults();
+	console.log("Getting " + req.params.keyword);
+	googleImages.init(req.params.keyword, req.params.num, function (err, data) {
+		res.json(googleImages.getResults());
+	});
+
+});
 
 module.exports = router;
