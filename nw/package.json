@@ -1,0 +1,10 @@
+{
+  "name": "nw-challenge",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "width": 790,
+    "height": 600
+  }
+}
